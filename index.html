@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromedioNODOCIENTIFICO-BETA</title>
+    <link rel="stylesheet" href="promedionodos.css">
+</head>
+<body>
+    <div class="contenedor">
+    <p>INGRESA LA NOTA DE CADA MATERIA:</p>
+    <p>Nota trigonometria &nbsp;&nbsp;<input type="text" name="" id="n1"></p>
+    <p>Nota geometria &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" id="n2"></p>
+    <p>Nota fisica &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" id="n3"></p>
+    <p>Nota quimica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="" id="n4"></p>
+    <p>Nota tecnologia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" id="n5"></p>
+    <button type="button" onclick="CalcularPromedio()">Calcular Promedio</button>
+    <p id="promedio"></p>
+</div>
+
+<script>
+    function CalcularPromedio() {
+        // Paso 1: sumar intensidad horaria de las materias
+        const intensidadTrigonometria = 3;
+        const intensidadGeometria = 2;
+        const intensidadFisica = 4;
+        const intensidadQuimica = 3;
+        const intensidadTecnologia = 1;
+
+        const intensidadNodo = intensidadTrigonometria + intensidadGeometria + intensidadFisica + intensidadQuimica + intensidadTecnologia;
+        
+        // Paso 2: dividir intensidad de cada materia entre la del nodo
+        const ProMateriaTrigo = intensidadTrigonometria / intensidadNodo;
+        const ProMateriaGeo = intensidadGeometria / intensidadNodo;
+        const ProMateriaFisica = intensidadFisica / intensidadNodo;
+        const ProMateriaQuimica = intensidadQuimica / intensidadNodo;
+        const ProMateriaTecnologia = intensidadTecnologia / intensidadNodo;
+
+        // Paso 3: ese resultado x nota de la materia
+        let n1 = parseFloat(document.getElementById("n1").value);
+        let n2 = parseFloat(document.getElementById("n2").value);
+        let n3 = parseFloat(document.getElementById("n3").value);
+        let n4 = parseFloat(document.getElementById("n4").value);
+        let n5 = parseFloat(document.getElementById("n5").value);
+
+        const ResultXMateria1 = ProMateriaTrigo * n1;
+        const ResultXMateria2 = ProMateriaGeo * n2;
+        const ResultXMateria3 = ProMateriaFisica * n3;
+        const ResultXMateria4 = ProMateriaQuimica * n4;
+        const ResultXMateria5 = ProMateriaTecnologia * n5;
+
+        // Paso 4: sumar los resultados
+        let ResultadoFinal = ResultXMateria1 + ResultXMateria2 + ResultXMateria3 + ResultXMateria4 + ResultXMateria5;
+
+        // Mostrar el resultado
+        document.getElementById("promedio").innerText = "El promedio del nodo es: " + ResultadoFinal.toFixed(2);
+    }
+</script>
+</body>
+</html>

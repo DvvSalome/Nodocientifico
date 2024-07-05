@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./descargar.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    width: 400px;
+    padding: 20px;
+    background-color: #ebedee;
+    box-shadow: 5px 5px 10px 10px rgba(226, 229, 229, 0.603);
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+
+.contenedor p{
+    margin-top: 40px;
+}
+
+.contenedor p:nth-child(1){
+    font-size: 20px;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+    
+}
+
+.contenedor button {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+    color: black;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: -20px;
+   }
+   
+   .contenedor button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .contenedor button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .contenedor button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   .contenedor button::after {
+    background-color: #fff;
+   }
+   
+   .contenedor button::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
