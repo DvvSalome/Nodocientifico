@@ -7,15 +7,78 @@
     <link rel="stylesheet" href="promedionodos.css">
 </head>
 <body>
+
+    <!-- Astronauta -->
+    <div class="box-of-star1">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+      </div>
+      <div class="box-of-star2">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+      </div>
+      <div class="box-of-star3">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+      </div>
+      <div class="box-of-star4">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+      </div>
+      <div data-js="astro" class="astronaut">
+        <div class="head"></div>
+        <div class="arm arm-left"></div>
+        <div class="arm arm-right"></div>
+        <div class="body">
+          <div class="panel"></div>
+        </div>
+        <div class="leg leg-left"></div>
+        <div class="leg leg-right"></div>
+        <div class="schoolbag"></div>
+      </div>
+   
+
     <div class="contenedor">
+        <h2>NODO CIENTIFICO</h2>
     <p>INGRESA LA NOTA DE CADA MATERIA:</p>
-    <p>Nota trigonometria &nbsp;&nbsp;<input type="text" name="" id="n1"></p>
-    <p>Nota geometria &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" id="n2"></p>
-    <p>Nota fisica &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" id="n3"></p>
-    <p>Nota quimica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="" id="n4"></p>
-    <p>Nota tecnologia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" id="n5"></p>
+    <div class="textInputWrapper">
+        <input placeholder="Nota Trigonometria" type="text" class="textInput" id="n1">
+    </div>
+    <div class="textInputWrapper">
+        <input placeholder="Nota Geometria" type="text" class="textInput" id="n2">
+    </div>
+    <div class="textInputWrapper">
+        <input placeholder="Nota Fisica" type="text" class="textInput" id="n3">
+    </div>
+    <div class="textInputWrapper">
+        <input placeholder="Nota Quimica" type="text" class="textInput" id="n4">
+    </div>
+    <div class="textInputWrapper">
+        <input placeholder="Nota Tecnologia" type="text" class="textInput" id="n5">
+    </div>
     <button type="button" onclick="CalcularPromedio()">Calcular Promedio</button>
     <p id="promedio"></p>
+    <!-- <a href="#">Volver al menu</a> -->
 </div>
 
 <script>
